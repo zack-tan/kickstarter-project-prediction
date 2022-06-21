@@ -9,18 +9,15 @@ All codefiles are commented but a brief description of steps followed is as foll
 ## Dataset
 Information from over 20,000 projects was scraped from Kickstarter and can be found in the file 'Kickstarter.xlsx' within the repo.
 
-<br>
-
 ## Steps followed
 1. Defining the target variable (whether a project was successful or not)
 2. Correlation check for independent variables
-3. Selection of variables to use 
+3. Selection of variables to use in model-building.
+    - Important: Since prediction is to be made during project launch, several variables (e.g. amount backed) for which a value can only be derived DURING a project's active period had to be dropped.
 4. 1-hot encoding for categorical predictors
 5. Train-test split for dataset
 6. Build models and perform cross-validation (more details below)
 7. Observe accuracy of models and repeat steps 3-6, tuning hyperparameters & trying different combinations of predictors, in an iterative process to achieve a high and robust accuracy value.
-
-<br>
 
 ## Models used
 Several models were built and compared in this project. These are as follows:
